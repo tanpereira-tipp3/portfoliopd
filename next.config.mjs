@@ -8,6 +8,16 @@ const nextConfig = {
       },
     ],
   },
+  // Fix for dev server 500 errors
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
