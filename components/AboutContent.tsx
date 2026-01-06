@@ -149,8 +149,8 @@ export default function AboutContent() {
     >
 
       {/* Header and About Section with specific gap */}
-      <div className="flex flex-col gap-12 md:gap-[106px] relative shrink-0 w-full z-10">
-        <div className="flex flex-col gap-12 relative shrink-0 w-full z-10">
+      <div className="flex flex-col gap-12 md:gap-[106px] relative shrink-0 w-full z-10" style={{ height: 'fit-content' }}>
+        <div className="flex flex-col gap-12 relative shrink-0 w-full z-10" style={{ height: 'fit-content' }}>
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 relative shrink-0 w-full z-10">
             <h1 className="font-libre-baskerville font-medium italic leading-normal relative shrink-0 text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-black tracking-0 uppercase">
