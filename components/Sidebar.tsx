@@ -5,8 +5,8 @@ import { HomeIcon, WorkIcon, StarIcon, PhoneIcon } from "./icons";
 
 export default function Sidebar({ activePage = "home" }: { activePage?: "home" | "work" | "about" | "contact" | "faq" | "inbox" }) {
   return (
-    <div className="bg-white flex flex-row md:flex-col w-full md:w-auto border-b md:border-b-0 border-[#e3e3e3] md:h-full items-center md:items-start relative shrink-0 overflow-x-auto">
-      <div className="flex flex-row md:flex-col gap-2 md:gap-6 items-center md:items-center justify-start px-4 md:px-6 py-3 md:py-8 relative shrink-0 border-0">
+    <div className="bg-white flex flex-row md:flex-col w-full md:w-auto border-t md:border-b-0 md:border-l border-[#e3e3e3] md:h-full items-center md:items-start fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto z-50 md:z-auto shadow-[0_-2px_8px_rgba(0,0,0,0.1)] md:shadow-none">
+      <div className="flex flex-row md:flex-col gap-2 md:gap-6 items-center md:items-center justify-around md:justify-start px-4 md:px-6 py-3 md:py-8 relative shrink-0 border-0 w-full md:w-auto">
         <Link href="/" className={`${activePage === "home" ? "bg-surface-container-low" : ""} flex flex-row md:flex-col items-center md:items-center p-2 md:p-3 relative rounded-lg shrink-0 w-full hover:bg-surface-container-low transition-colors`}>
           <div className="flex flex-row md:flex-col gap-1.5 md:gap-2 items-center relative shrink-0">
             <div className="relative shrink-0 size-4 text-[#1e1e1e]">
