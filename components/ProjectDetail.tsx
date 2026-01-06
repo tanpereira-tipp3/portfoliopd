@@ -102,7 +102,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
           {/* Project Overview Section - Two Columns */}
           <div className="w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12" style={{ color: "rgba(0, 0, 0, 0)" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {/* Left Column - Role Section in White Card */}
               <div className="bg-white rounded-2xl border-2 border-surface-variant pt-12 pb-12 px-8 flex flex-col gap-10 md:gap-6 justify-between items-start">
                 <div className="flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-0 w-full">
