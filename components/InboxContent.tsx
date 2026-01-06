@@ -76,6 +76,19 @@ export default function InboxContent() {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   };
 
+  if (typeof window === "undefined") {
+    return (
+      <div className="border-[#e3e3e3] border-b-0 md:border-l border-r-0 border-solid border-t flex flex-col min-h-0 min-w-0 pb-24 pt-8 px-4 sm:px-6 md:px-8 relative rounded-tl-0 md:rounded-tl-[24px] shadow-none md:shadow-[0px_16px_32px_-4px_rgba(79,55,138,0.1),0px_4px_4px_-4px_rgba(79,55,138,0.05)] shrink-0 w-full flex-1 h-full overflow-hidden bg-[#fafafa]">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-4 shrink-0 mb-4">
+          <h1 className="font-libre-baskerville font-bold italic text-2xl sm:text-3xl md:text-4xl text-black">INBOX</h1>
+        </div>
+        <div className="flex-1 flex items-center justify-center">
+          <p className="font-roboto text-[#757575]">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div 
       className="border-[#e3e3e3] border-b-0 md:border-l border-r-0 border-solid border-t flex flex-col min-h-0 min-w-0 pb-24 pt-8 px-4 sm:px-6 md:px-8 relative rounded-tl-0 md:rounded-tl-[24px] shadow-none md:shadow-[0px_16px_32px_-4px_rgba(79,55,138,0.1),0px_4px_4px_-4px_rgba(79,55,138,0.05)] shrink-0 w-full flex-1 h-full overflow-hidden"
