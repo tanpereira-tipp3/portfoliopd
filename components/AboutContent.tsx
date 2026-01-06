@@ -203,7 +203,7 @@ export default function AboutContent() {
             <a 
               href="/cv-tania-pereira.pdf" 
               download="cv-tania-pereira.pdf"
-              className="bg-primary-container border border-primary border-solid flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.2)] hover:-translate-y-0.5"
+              className="bg-primary-container border border-primary border-solid flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.2)] hover:-translate-y-0.5 mb-6 md:mb-0"
             >
               <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-primary tracking-[0.4px]">
                 Download CV
@@ -218,7 +218,7 @@ export default function AboutContent() {
         </div>
 
         {/* Experience Timeline */}
-        <div className="flex flex-col gap-0 items-center justify-center relative shrink-0 w-full z-10 mt-12 md:mt-0">
+        <div className="flex flex-col gap-0 items-center justify-center relative shrink-0 w-full z-10 mt-8 md:mt-0">
         {/* Mobile Timeline */}
         <div className="flex md:hidden flex-col gap-6 items-start justify-start relative shrink-0 w-full px-4">
           <div className="relative w-full">
@@ -236,7 +236,7 @@ export default function AboutContent() {
                     </div>
                     <div className="font-roboto font-normal relative shrink-0 text-[0px] tracking-[0.4px] w-full">
                       <p className="font-ibm-plex-mono leading-4 mb-0 not-italic text-[10px]">{exp.period}</p>
-                      <p className="font-roboto leading-5 text-sm tracking-[0.25px]">
+                      <p className="font-roboto leading-5 text-sm tracking-[0.25px] mb-4">
                         {exp.description}
                       </p>
                     </div>
@@ -349,7 +349,7 @@ export default function AboutContent() {
               </div>
               <div className="font-roboto font-normal relative shrink-0 text-[0px] tracking-[0.4px] w-full whitespace-pre-wrap">
                 <p className="font-ibm-plex-mono leading-4 mb-0 not-italic text-[10px]">{experiences[0].period}</p>
-                <p className="font-roboto leading-5 text-sm tracking-[0.25px]">
+                <p className="font-roboto leading-5 text-sm tracking-[0.25px] mb-4">
                   {experiences[0].description}
                 </p>
               </div>
