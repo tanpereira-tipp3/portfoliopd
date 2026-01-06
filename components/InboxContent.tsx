@@ -97,7 +97,7 @@ export default function InboxContent() {
       {/* Content */}
       <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden gap-4">
         {/* Messages List */}
-        <div className={`w-full md:w-[384px] border border-[#e7e0ec] rounded-2xl overflow-y-auto bg-white ${selectedMessage ? 'hidden md:flex' : 'flex'} flex-col`}>
+        <div className={`w-full md:w-[384px] border border-[#e7e0ec] rounded-2xl overflow-y-auto bg-white ${selectedMessage ? 'hidden md:block' : 'block'}`}>
           <div className="p-4">
             {messages.length > 0 ? messages.map((message) => (
               <button
