@@ -45,9 +45,8 @@ export default function InboxContent() {
         },
       ];
       setMessages(initialMessages);
-      // Only auto-select on mobile, on desktop show "Select a message" initially
-      const isMobile = window.innerWidth < 768;
-      if (isMobile && initialMessages.length > 0) {
+      // Auto-select the first message by default on all screen sizes
+      if (initialMessages.length > 0) {
         setSelectedMessage(initialMessages[0]);
       }
     }
