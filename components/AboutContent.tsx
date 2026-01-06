@@ -158,7 +158,7 @@ export default function AboutContent() {
             </h1>
             <a 
               href="mailto:tanpereira5@gmail.com"
-              className="bg-primary flex gap-[10px] items-center justify-center px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 relative rounded-full shrink-0 cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
+              className="bg-primary hidden sm:flex gap-[10px] items-center justify-center px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 relative rounded-full shrink-0 cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
             >
               <p className="font-roboto font-medium leading-4 relative shrink-0 text-sm sm:text-base md:text-lg text-white tracking-[0.4px]">
                 Send a message
@@ -185,11 +185,9 @@ export default function AboutContent() {
 
         {/* Tagline and Description */}
         <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[60px] items-start justify-center relative shrink-0 w-full h-fit max-w-full">
-          <div className="flex flex-1 flex-col gap-0 items-start min-w-0 relative shrink-0 w-full lg:w-auto max-w-full" style={{ height: 'auto', minHeight: 'auto' }}>
-            <p className="font-libre-baskerville font-bold italic leading-normal uppercase relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full whitespace-pre-wrap break-words overflow-wrap-anywhere" style={{ height: 'auto', margin: 0, padding: 0 }}>
-              Tania Pereira, Product Designer focused on making complex systems intuitive and scalable.
-            </p>
-          </div>
+          <p className="font-libre-baskerville font-bold italic leading-normal uppercase flex-1 min-w-0 relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full lg:w-auto max-w-full whitespace-pre-wrap break-words overflow-wrap-anywhere" style={{ height: 'fit-content', margin: 0, padding: 0, lineHeight: 'normal', alignSelf: 'flex-start', maxHeight: 'fit-content' }}>
+            Tania Pereira, Product Designer focused on making complex systems intuitive and scalable.
+          </p>
           <div className="flex flex-1 flex-col gap-4 sm:gap-6 items-start min-h-0 min-w-0 relative shrink-0 pb-0 w-full lg:w-auto max-w-full">
             <div className="font-roboto font-normal leading-5 relative shrink-0 text-sm sm:text-base text-[#1e1e1e] tracking-[0.25px] w-full whitespace-pre-wrap break-words overflow-wrap-anywhere">
               <p className="mb-0">
@@ -200,18 +198,31 @@ export default function AboutContent() {
                 I enjoy designing clarity into messy problems, building patterns that scale, and partnering with engineers, PMs, and data scientists to bring impactful products to life.
               </p>
             </div>
-            <a 
-              href="/cv-tania-pereira.pdf" 
-              download="cv-tania-pereira.pdf"
-              className="bg-primary-container border border-primary border-solid flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.2)] hover:-translate-y-0.5 mb-6 md:mb-0"
-            >
-              <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-primary tracking-[0.4px]">
-                Download CV
-              </p>
-              <div className="relative shrink-0 size-5 sm:size-6 text-primary">
-                <DownloadIcon className="size-full" />
-              </div>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-stretch sm:items-center justify-start relative shrink-0 w-full">
+              <a 
+                href="/cv-tania-pereira.pdf" 
+                download="cv-tania-pereira.pdf"
+                className="bg-primary-container border border-primary border-solid flex gap-[10px] items-center justify-center px-6 sm:px-8 py-4 sm:py-5 relative rounded-full shrink-0 flex-1 sm:flex-initial cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.2)] hover:-translate-y-0.5"
+              >
+                <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-primary tracking-[0.4px]">
+                  Download CV
+                </p>
+                <div className="relative shrink-0 size-5 sm:size-6 text-primary">
+                  <DownloadIcon className="size-full" />
+                </div>
+              </a>
+              <a 
+                href="mailto:tanpereira5@gmail.com"
+                className="bg-primary md:hidden flex gap-[10px] items-center justify-center px-6 sm:px-8 py-4 sm:py-5 relative rounded-full shrink-0 flex-1 sm:flex-initial cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
+              >
+                <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-white tracking-[0.4px]">
+                  Send a message
+                </p>
+                <div className="relative shrink-0 size-5 sm:size-6 text-white">
+                  <MessagePlainIcon className="size-full" />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
         </div>

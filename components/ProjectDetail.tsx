@@ -98,36 +98,36 @@ export default function ProjectDetail({ slug }: { slug: string }) {
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12" style={{ color: "rgba(0, 0, 0, 0)" }}>
               {/* Left Column - Role Section in White Card */}
-              <div className="bg-white rounded-2xl border border-surface-variant pt-12 pb-12 px-8 flex flex-col gap-0 justify-between items-start">
-                <div className="flex justify-start items-start">
-                  <p className="font-roboto font-black text-lg text-[#1e1e1e] tracking-[0.5px] w-[150px]">
+              <div className="bg-white rounded-2xl border-2 border-surface-variant pt-12 pb-12 px-8 flex flex-col gap-10 md:gap-6 justify-between items-start">
+                <div className="flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-0 w-full">
+                  <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Role
                   </p>
-                  <p className="font-roboto font-normal text-lg text-[#1e1e1e] tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
                     {project.role}
                   </p>
                 </div>
-                <div className="flex justify-start items-start gap-0">
-                  <p className="font-roboto font-black text-lg text-[#1e1e1e] tracking-[0.5px] w-[150px]">
+                <div className="flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-0 w-full">
+                  <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Duration
                   </p>
-                  <p className="font-roboto font-normal text-lg text-[#1e1e1e] tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
                     {project.duration}
                   </p>
                 </div>
-                <div className="flex justify-start items-start">
-                  <p className="font-roboto font-black text-lg text-[#1e1e1e] tracking-[0.5px] w-[150px]">
+                <div className="flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-0 w-full">
+                  <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Client
                   </p>
-                  <p className="font-roboto font-normal text-lg text-[#1e1e1e] tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
                     {project.client}
                   </p>
                 </div>
-                <div className="flex justify-start items-start">
-                  <p className="font-roboto font-black text-lg text-[#1e1e1e] tracking-[0.5px] w-[150px]">
+                <div className="flex flex-col sm:flex-row justify-start items-start gap-2 sm:gap-0 w-full">
+                  <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Tools
                   </p>
-                  <p className="font-roboto font-normal text-lg text-[#1e1e1e] tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg tracking-[0.5px] break-words flex-1" style={{ color: "var(--sds-color-text-default-secondary)" }}>
                     {project.tools}
                   </p>
                 </div>
@@ -145,7 +145,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                 </div>
                 <div className="flex flex-col gap-3">
                   <h3 className="font-roboto font-black text-base text-[#1e1e1e] tracking-[0.5px]">
-                    The Challenge
+                    The challenge
                   </h3>
                   <p className="font-roboto font-normal text-[14px] leading-6 text-[#1e1e1e] tracking-[0.5px] whitespace-pre-line">
                     {project.challenge}
@@ -153,7 +153,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                 </div>
                 <div className="flex flex-col gap-3">
                   <h3 className="font-roboto font-black text-base text-[#1e1e1e] tracking-[0.5px]">
-                    My Role
+                    My role
                   </h3>
                   <p className="font-roboto font-normal text-sm leading-6 text-[#1e1e1e] tracking-[0.5px]">
                     {project.roleDescription}
@@ -168,7 +168,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
             <div className="flex flex-col gap-[88px] w-full">
               {/* Process Image (if beforeProcess exists) */}
               {project.images.beforeProcess && (
-                <div className="relative w-full min-h-[355px] rounded-2xl overflow-hidden bg-[#F5EFF7] border border-surface-variant border-solid pt-8 px-[200px] pb-0 flex items-start justify-start" style={{ height: "400px" }}>
+                <div className="relative w-full min-h-[355px] rounded-2xl overflow-hidden bg-[#F5EFF7] border border-surface-variant border-solid pt-8 px-4 sm:px-8 md:px-[200px] pb-0 flex items-start justify-start" style={{ height: "400px" }}>
                   <Image
                     alt="Process visualization"
                     className="object-contain shadow-sm"

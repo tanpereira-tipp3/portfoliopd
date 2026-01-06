@@ -46,7 +46,7 @@ export default function WorkContent() {
         </h1>
         <a 
           href="mailto:tanpereira5@gmail.com"
-          className="bg-primary flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
+          className="bg-primary hidden sm:flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
         >
           <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-white tracking-[0.4px]">
             Send a message
@@ -89,6 +89,18 @@ export default function WorkContent() {
           );
         })}
       </div>
+      {/* Send a message button - mobile only, at bottom */}
+      <a 
+        href="mailto:tanpereira5@gmail.com"
+        className="bg-primary sm:hidden flex gap-[10px] items-center justify-center px-6 py-4 relative rounded-full shrink-0 w-full cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5 mt-4"
+      >
+        <p className="font-roboto font-medium leading-4 relative shrink-0 text-base text-white tracking-[0.4px]">
+          Send a message
+        </p>
+        <div className="relative shrink-0 size-5 text-white">
+          <MessagePlainIcon className="size-full" />
+        </div>
+      </a>
     </div>
   );
 }

@@ -29,9 +29,9 @@ export default function Header() {
 
   return (
     <div className="bg-white flex items-start justify-between px-4 sm:px-6 md:px-8 py-3 md:py-4 relative shrink-0 w-full">
-      <div className="h-6 sm:h-8 relative shrink-0 w-[40px] sm:w-[54px] flex items-center">
+      <Link href="/" className="h-6 sm:h-8 relative shrink-0 w-[40px] sm:w-[54px] flex items-center hover:opacity-70 transition-opacity">
         <TipLogo className="w-full h-full" />
-      </div>
+      </Link>
       <div className="flex gap-2 sm:gap-4 items-center relative shrink-0">
         <Link
           href="/inbox"
