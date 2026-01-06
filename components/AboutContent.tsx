@@ -149,7 +149,7 @@ export default function AboutContent() {
       </div>
 
       {/* Header and About Section with specific gap */}
-      <div className="flex flex-col gap-[106px] relative shrink-0 w-full z-10">
+      <div className="flex flex-col gap-12 md:gap-[106px] relative shrink-0 w-full z-10">
         <div className="flex flex-col gap-12 relative shrink-0 w-full z-10">
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 relative shrink-0 w-full z-10">
@@ -218,7 +218,7 @@ export default function AboutContent() {
         </div>
 
         {/* Experience Timeline */}
-        <div className="flex flex-col gap-0 items-center justify-center relative shrink-0 w-full z-10">
+        <div className="flex flex-col gap-0 items-center justify-center relative shrink-0 w-full z-10 mt-8 md:mt-0">
         {/* Mobile Timeline */}
         <div className="flex md:hidden flex-col gap-6 items-start justify-start relative shrink-0 w-full px-4">
           <div className="relative w-full">
