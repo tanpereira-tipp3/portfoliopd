@@ -117,6 +117,7 @@ export default function InboxContent() {
                         alt={message.from}
                         fill
                         className="object-cover"
+                        style={{ objectPosition: "top" }}
                       />
                     </div>
                     <div className="flex flex-col gap-1 items-start flex-1 min-w-0">
@@ -182,6 +183,7 @@ export default function InboxContent() {
                         alt={selectedMessage.from}
                         fill
                         className="object-cover"
+                        style={{ objectPosition: "top" }}
                       />
                     </div>
                     <div className="flex gap-1 items-center flex-wrap">
