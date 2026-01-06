@@ -5,24 +5,26 @@ import Link from "next/link";
 import { HelpIcon, MessageIcon, TipLogo } from "./icons";
 
 export default function Header() {
-  const [hasUnreadMessage, setHasUnreadMessage] = useState(true);
+  const [hasUnreadMessage, setHasUnreadMessage] = useState(false);
 
   useEffect(() => {
     // Check if message has been read (stored in localStorage)
-    const messageRead = localStorage.getItem("inbox_message_read");
-    if (messageRead === "true") {
-      setHasUnreadMessage(false);
+    if (typeof window !== "undefined") {
+      const messageRead = localStorage.getItem("inbox_message_read");
+      if (messageRead !== "true") {
+        setHasUnreadMessage(true);
+      }
+
+      // Listen for message read events
+      const handleMessageRead = () => {
+        setHasUnreadMessage(false);
+      };
+
+      window.addEventListener("inboxMessageRead", handleMessageRead);
+      return () => {
+        window.removeEventListener("inboxMessageRead", handleMessageRead);
+      };
     }
-
-    // Listen for message read events
-    const handleMessageRead = () => {
-      setHasUnreadMessage(false);
-    };
-
-    window.addEventListener("inboxMessageRead", handleMessageRead);
-    return () => {
-      window.removeEventListener("inboxMessageRead", handleMessageRead);
-    };
   }, []);
 
   return (
