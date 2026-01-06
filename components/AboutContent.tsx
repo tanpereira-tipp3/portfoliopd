@@ -135,18 +135,18 @@ const reviews = [
 
 export default function AboutContent() {
   return (
-    <div className="bg-[#fafafa] border-[#e3e3e3] border-b-0 md:border-l border-r-0 border-solid border-t flex flex-col gap-12 md:gap-[48px] items-center min-h-0 min-w-0 pb-24 pt-8 px-4 sm:px-6 md:px-8 relative rounded-tl-0 md:rounded-tl-[24px] shadow-none md:shadow-[0px_16px_32px_-4px_rgba(79,55,138,0.1),0px_4px_4px_-4px_rgba(79,55,138,0.05)] shrink-0 w-full flex-1 h-full overflow-y-auto">
-      {/* Background image with opacity */}
-      <div className="absolute inset-0 w-full h-full opacity-[0.15] pointer-events-none rounded-tl-0 md:rounded-tl-[24px] overflow-hidden">
-        <Image
-          src="https://www.figma.com/api/mcp/asset/666cf0a5-d90c-4e3f-a93c-16a21aa7570c"
-          alt=""
-          fill
-          className="object-cover object-center bg-image-fixed-height"
-          sizes="100vw"
-          unoptimized
-        />
-      </div>
+    <div 
+      className="border-[#e3e3e3] border-b-0 md:border-l border-r-0 border-solid border-t flex flex-col gap-12 md:gap-[48px] items-center min-h-0 min-w-0 pb-24 pt-8 px-4 sm:px-6 md:px-8 relative rounded-tl-0 md:rounded-tl-[24px] shadow-none md:shadow-[0px_16px_32px_-4px_rgba(79,55,138,0.1),0px_4px_4px_-4px_rgba(79,55,138,0.05)] shrink-0 w-full flex-1 h-full overflow-y-auto"
+      style={{
+        background: `
+          linear-gradient(135deg, rgba(224, 247, 250, 0.6) 0%, rgba(243, 229, 245, 0.5) 50%, rgba(225, 190, 231, 0.4) 100%),
+          linear-gradient(45deg, rgba(187, 222, 251, 0.4) 0%, rgba(250, 250, 250, 0.8) 50%, rgba(225, 190, 231, 0.5) 100%),
+          linear-gradient(180deg, rgba(224, 247, 250, 0.5) 0%, rgba(250, 250, 250, 0.9) 50%, rgba(225, 190, 231, 0.4) 100%),
+          #fafafa
+        `,
+        backgroundSize: '100% 100%',
+      }}
+    >
 
       {/* Header and About Section with specific gap */}
       <div className="flex flex-col gap-12 md:gap-[106px] relative shrink-0 w-full z-10">
