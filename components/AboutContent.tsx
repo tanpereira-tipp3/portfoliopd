@@ -184,14 +184,14 @@ export default function AboutContent() {
         </div>
 
         {/* Tagline and Description */}
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[60px] items-start justify-center relative shrink-0 w-full h-fit">
-          <div className="flex flex-[1_0_0] flex-col gap-0 items-start min-w-0 relative shrink-0 w-full lg:w-auto h-fit">
-            <p className="font-libre-baskerville font-bold italic leading-normal uppercase relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full whitespace-pre-wrap h-fit">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[60px] items-start justify-center relative shrink-0 w-full h-fit max-w-full overflow-hidden">
+          <div className="flex flex-[1_0_0] flex-col gap-0 items-start min-w-0 relative shrink-0 w-full lg:w-auto h-fit max-w-full">
+            <p className="font-libre-baskerville font-bold italic leading-normal uppercase relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full whitespace-pre-wrap h-fit break-words overflow-wrap-anywhere">
               Tania Pereira, Product Designer focused on making complex systems intuitive and scalable.
             </p>
           </div>
-          <div className="flex flex-[1_0_0] flex-col gap-4 sm:gap-6 items-start min-h-0 min-w-0 relative shrink-0 pb-0 w-full lg:w-auto">
-            <div className="font-roboto font-normal leading-5 relative shrink-0 text-sm sm:text-base text-[#1e1e1e] tracking-[0.25px] w-full whitespace-pre-wrap">
+          <div className="flex flex-[1_0_0] flex-col gap-4 sm:gap-6 items-start min-h-0 min-w-0 relative shrink-0 pb-0 w-full lg:w-auto max-w-full">
+            <div className="font-roboto font-normal leading-5 relative shrink-0 text-sm sm:text-base text-[#1e1e1e] tracking-[0.25px] w-full whitespace-pre-wrap break-words overflow-wrap-anywhere">
               <p className="mb-0">
                 I thrive in environments where ambiguity, data, and multidisciplinary collaboration intersect, especially when AI or technical constraints are part of the challenge. My work spans B2B platforms, operational tools, identity systems, logistics, and AI-assisted workflows.
               </p>
