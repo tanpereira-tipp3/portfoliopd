@@ -45,7 +45,8 @@ export default function InboxContent() {
         },
       ];
       setMessages(initialMessages);
-      if (initialMessages.length > 0) {
+      // Only auto-select on mobile, on desktop show "Select a message" initially
+      if (window.innerWidth < 768 && initialMessages.length > 0) {
         setSelectedMessage(initialMessages[0]);
       }
     }
@@ -88,14 +89,14 @@ export default function InboxContent() {
       }}
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-6 py-4 shrink-0 mb-4">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-4 shrink-0 mb-4">
         <h1 className="font-libre-baskerville font-bold italic text-2xl sm:text-3xl md:text-4xl text-black">INBOX</h1>
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 min-h-0 overflow-hidden gap-4">
+      <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden gap-4">
         {/* Messages List */}
-        <div className="w-full md:w-[384px] border border-[#e7e0ec] rounded-2xl overflow-y-auto bg-white">
+        <div className={`w-full md:w-[384px] border border-[#e7e0ec] rounded-2xl overflow-y-auto bg-white ${selectedMessage ? 'hidden md:block' : 'block'}`}>
           <div className="p-4">
             {messages.map((message) => (
               <button
@@ -146,11 +147,24 @@ export default function InboxContent() {
         </div>
 
         {/* Message Detail */}
-        <div className="flex-1 flex flex-col overflow-hidden border border-[#e7e0ec] rounded-2xl bg-white">
+        <div className={`flex-1 flex flex-col overflow-hidden border border-[#e7e0ec] rounded-2xl bg-white ${selectedMessage ? 'block' : 'hidden md:block'}`}>
           {selectedMessage ? (
             <>
+              {/* Back button for mobile */}
+              <div className="md:hidden flex items-center px-4 pt-4 pb-2">
+                <button
+                  onClick={() => setSelectedMessage(null)}
+                  className="flex items-center gap-2 text-[#757575] hover:text-[#1e1e1e] transition-colors"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="font-roboto text-sm">Back</span>
+                </button>
+              </div>
+              
               {/* Date at top center with line below */}
-              <div className="flex flex-col gap-4 items-center pt-6 px-4 shrink-0 bg-white">
+              <div className="flex flex-col gap-4 items-center pt-4 md:pt-6 px-4 shrink-0 bg-white">
                 <p className="font-roboto text-xs leading-4 text-[#757575]">
                   {formatDate(selectedMessage.timestamp)}
                 </p>
@@ -158,7 +172,7 @@ export default function InboxContent() {
               </div>
               
               {/* Message Header with profile picture and body */}
-              <div className="px-4 pt-4 flex-1 flex flex-col gap-4 bg-white min-h-0">
+              <div className="px-4 pt-4 flex-1 flex flex-col gap-4 bg-white min-h-0 overflow-y-auto">
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-2 items-center">
                     <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0">
@@ -169,7 +183,7 @@ export default function InboxContent() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="flex gap-1 items-center">
+                    <div className="flex gap-1 items-center flex-wrap">
                       <p className="font-roboto font-medium text-sm leading-5 text-[#1e1e1e]">
                         {selectedMessage.from}
                       </p>
@@ -180,7 +194,7 @@ export default function InboxContent() {
                   </div>
                   
                   {/* Message Body */}
-                  <div className="flex items-center justify-center px-12 py-0">
+                  <div className="flex items-center justify-center px-4 sm:px-12 py-0">
                     <div className="flex-1 font-roboto text-sm leading-5 text-[#1e1e1e] whitespace-pre-wrap">
                       {selectedMessage.content}
                     </div>
@@ -193,12 +207,12 @@ export default function InboxContent() {
                 <div className="border-b border-[#e3e3e3] w-full h-px"></div>
                 <a 
                   href="mailto:tanpereira5@gmail.com"
-                  className="bg-primary flex gap-[10px] items-center justify-center px-8 py-4 relative rounded-full shrink-0 w-full cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
+                  className="bg-primary flex gap-[10px] items-center justify-center px-6 sm:px-8 py-4 relative rounded-full shrink-0 w-full cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
                 >
-                  <p className="font-roboto font-medium leading-4 relative shrink-0 text-lg text-white tracking-[0.4px]">
+                  <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-white tracking-[0.4px]">
                     Send a message
                   </p>
-                  <div className="relative shrink-0 size-6 text-white">
+                  <div className="relative shrink-0 size-5 sm:size-6 text-white">
                     <MessagePlainIcon className="size-full" />
                   </div>
                 </a>
