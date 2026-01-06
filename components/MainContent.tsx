@@ -23,7 +23,7 @@ export default function MainContent() {
         </p>
         <a 
           href="mailto:tanpereira5@gmail.com"
-          className="bg-primary flex gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
+          className="hidden md:flex bg-primary gap-[10px] items-center justify-center px-6 sm:px-8 py-3 sm:py-4 relative rounded-full shrink-0 w-full sm:w-auto cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5"
         >
           <p className="font-roboto font-medium leading-4 relative shrink-0 text-base sm:text-lg text-white tracking-[0.4px]">
             Send a message
@@ -52,6 +52,18 @@ export default function MainContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch relative flex-auto md:flex-1 w-full min-w-0 min-h-0 md:overflow-hidden md:max-h-full">
           <div className="md:col-span-1 lg:col-span-1 flex flex-col min-h-0 md:max-h-full md:overflow-hidden">
             <AboutMeSection />
+            {/* Send a message button - mobile only, after About Me card */}
+            <a 
+              href="mailto:tanpereira5@gmail.com"
+              className="md:hidden bg-primary flex gap-[10px] items-center justify-center px-6 py-3 relative rounded-full shrink-0 w-full cursor-pointer hover:opacity-90 transition-all duration-300 hover:shadow-[0px_8px_16px_-4px_rgba(79,55,138,0.3)] hover:-translate-y-0.5 mt-4"
+            >
+              <p className="font-roboto font-medium leading-4 relative shrink-0 text-base text-white tracking-[0.4px]">
+                Send a message
+              </p>
+              <div className="relative shrink-0 size-5 text-white">
+                <MessagePlainIcon className="size-full" />
+              </div>
+            </a>
           </div>
           <div className="md:col-span-1 lg:col-span-2 flex flex-col min-h-0 md:max-h-full md:overflow-hidden mt-6 md:mt-0">
             <FeaturedProjects />
