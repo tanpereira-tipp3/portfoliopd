@@ -38,9 +38,9 @@ export default function InboxContent() {
         {
           id: "1",
           from: "Tania Pereira",
-          subject: "Welcome! Let's connect",
+          subject: "Welcome! let's connect",
           content: initialMessageContent,
-          timestamp: new Date().toISOString(),
+          timestamp: "2025-01-03T13:33:00.000Z", // Jan 3, 2025 1:33 PM as per design
           read: messageRead === "true",
         },
       ];
