@@ -46,7 +46,8 @@ export default function InboxContent() {
       ];
       setMessages(initialMessages);
       // Only auto-select on mobile, on desktop show "Select a message" initially
-      if (window.innerWidth < 768 && initialMessages.length > 0) {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile && initialMessages.length > 0) {
         setSelectedMessage(initialMessages[0]);
       }
     }
@@ -98,7 +99,7 @@ export default function InboxContent() {
         {/* Messages List */}
         <div className={`w-full md:w-[384px] border border-[#e7e0ec] rounded-2xl overflow-y-auto bg-white ${selectedMessage ? 'hidden md:block' : 'block'}`}>
           <div className="p-4">
-            {messages.map((message) => (
+            {messages.length > 0 && messages.map((message) => (
               <button
                 key={message.id}
                 onClick={() => handleMessageClick(message)}
@@ -143,6 +144,9 @@ export default function InboxContent() {
                 </div>
               </button>
             ))}
+            {messages.length === 0 && (
+              <p className="font-roboto text-sm text-[#757575] p-4">No messages</p>
+            )}
           </div>
         </div>
 
