@@ -1,0 +1,19 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import InboxContent from "./InboxContent";
+
+export default function InboxPage() {
+  return (
+    <div className="bg-white flex flex-col items-start relative h-screen w-full overflow-auto md:overflow-hidden">
+      <Header />
+      <div className="flex flex-col md:flex-row flex-auto md:flex-1 items-start md:items-stretch min-h-0 min-w-0 relative shrink-0 w-full">
+        <Sidebar activePage="inbox" />
+        <InboxContent />
+      </div>
+    </div>
+  );
+}
+

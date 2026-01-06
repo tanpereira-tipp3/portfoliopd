@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --sds-size-space-0: 0px;
+  --sds-size-space-050: 2px;
+  --sds-size-space-100: 4px;
+  --sds-size-space-200: 8px;
+  --sds-size-space-300: 12px;
+  --sds-size-space-400: 16px;
+  --sds-size-space-600: 24px;
+  --sds-size-space-800: 32px;
+  --sds-size-space-1200: 48px;
+  --sds-size-radius-100: 4px;
+  --sds-size-radius-400: 16px;
+  --sds-size-radius-full: 9999px;
+  --sds-size-depth-0: 0px;
+  --sds-size-depth-100: 4px;
+  --sds-size-depth-400: 16px;
+  --sds-size-depth-800: 32px;
+  --sds-size-depth-negative-100: -4px;
+  --sds-size-depth-negative-200: -8px;
+  --sds-color-background-default-default: white;
+  --sds-color-background-brand-hover: #1e1e1e;
+  --sds-color-text-default-default: #1e1e1e;
+  --sds-color-text-default-secondary: #757575;
+  --sds-color-black-400: rgba(12, 12, 13, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-image-fixed-height {
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
