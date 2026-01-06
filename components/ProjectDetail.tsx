@@ -29,12 +29,17 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (!project) {
+      console.warn(`Project not found for slug: ${slug}`);
       router.push("/work");
     }
-  }, [project, router]);
+  }, [project, router, slug]);
 
   if (!project) {
-    return null;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>Loading project...</p>
+      </div>
+    );
   }
 
   // Find current project index and get next project
@@ -44,6 +49,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
   return (
     <div className="bg-white flex flex-col items-start relative h-screen w-full overflow-hidden">
+      {/* Debug: Project loaded */}
       <Header />
       <div className="flex flex-col md:flex-row flex-1 items-start md:items-stretch min-h-0 min-w-0 relative shrink-0 w-full overflow-hidden">
         <Sidebar activePage="work" />
@@ -103,7 +109,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Role
                   </p>
-                  <p className="font-roboto font-extralight text-lg text-default-secondary tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg text-[#757575] tracking-[0.5px]">
                     {project.role}
                   </p>
                 </div>
@@ -111,7 +117,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Duration
                   </p>
-                  <p className="font-roboto font-extralight text-lg text-default-secondary tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg text-[#757575] tracking-[0.5px]">
                     {project.duration}
                   </p>
                 </div>
@@ -119,7 +125,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Client
                   </p>
-                  <p className="font-roboto font-extralight text-lg text-default-secondary tracking-[0.5px]">
+                  <p className="font-roboto font-extralight text-lg text-[#757575] tracking-[0.5px]">
                     {project.client}
                   </p>
                 </div>
@@ -127,7 +133,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Tools
                   </p>
-                  <p className="font-roboto font-extralight text-lg text-default-secondary tracking-[0.5px] break-words flex-1">
+                  <p className="font-roboto font-extralight text-lg text-[#757575] tracking-[0.5px] break-words flex-1">
                     {project.tools}
                   </p>
                 </div>
