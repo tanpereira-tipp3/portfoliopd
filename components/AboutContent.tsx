@@ -185,8 +185,8 @@ export default function AboutContent() {
 
         {/* Tagline and Description */}
         <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[60px] items-start justify-center relative shrink-0 w-full h-fit max-w-full">
-          <div className="flex flex-1 flex-col gap-0 items-start min-w-0 relative shrink-0 w-full lg:w-auto max-w-full" style={{ height: 'fit-content' }}>
-            <p className="font-libre-baskerville font-bold italic leading-normal uppercase relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full whitespace-pre-wrap break-words overflow-wrap-anywhere" style={{ height: 'fit-content' }}>
+          <div className="flex flex-1 flex-col gap-0 items-start min-w-0 relative shrink-0 w-full lg:w-auto max-w-full" style={{ height: 'auto', minHeight: 'auto' }}>
+            <p className="font-libre-baskerville font-bold italic leading-normal uppercase relative shrink-0 text-xl sm:text-2xl md:text-3xl lg:text-[36px] text-[#1e1e1e] tracking-[0.4px] w-full whitespace-pre-wrap break-words overflow-wrap-anywhere" style={{ height: 'auto', margin: 0, padding: 0 }}>
               Tania Pereira, Product Designer focused on making complex systems intuitive and scalable.
             </p>
           </div>
