@@ -103,7 +103,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Role
                   </p>
-                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
+                  <p className="font-roboto font-extralight text-lg text-[var(--sds-color-text-default-secondary)] tracking-[0.5px]">
                     {project.role}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Duration
                   </p>
-                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
+                  <p className="font-roboto font-extralight text-lg text-[var(--sds-color-text-default-secondary)] tracking-[0.5px]">
                     {project.duration}
                   </p>
                 </div>
@@ -119,7 +119,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Client
                   </p>
-                  <p className="font-roboto font-extralight text-lg tracking-[0.5px]" style={{ color: "var(--sds-color-text-default-secondary)" }}>
+                  <p className="font-roboto font-extralight text-lg text-[var(--sds-color-text-default-secondary)] tracking-[0.5px]">
                     {project.client}
                   </p>
                 </div>
@@ -127,7 +127,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   <p className="font-roboto font-black text-xl text-[#1e1e1e] tracking-[0.5px] w-full sm:w-[150px] shrink-0">
                     Tools
                   </p>
-                  <p className="font-roboto font-extralight text-lg tracking-[0.5px] break-words flex-1" style={{ color: "var(--sds-color-text-default-secondary)" }}>
+                  <p className="font-roboto font-extralight text-lg text-[var(--sds-color-text-default-secondary)] tracking-[0.5px] break-words flex-1">
                     {project.tools}
                   </p>
                 </div>
