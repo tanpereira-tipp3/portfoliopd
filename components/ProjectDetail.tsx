@@ -36,8 +36,12 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
   if (!project) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <p>Loading project...</p>
+      <div className="flex items-center justify-center h-screen bg-white">
+        <div className="text-center">
+          <p className="text-xl font-bold mb-2">Project not found</p>
+          <p className="text-gray-600">Slug: {slug}</p>
+          <p className="text-gray-600 mt-2">Redirecting to work page...</p>
+        </div>
       </div>
     );
   }
@@ -102,6 +106,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
           {/* Project Overview Section - Two Columns */}
           <div className="w-full">
+            {/* Debug: Section should be visible */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {/* Left Column - Role Section in White Card */}
               <div className="bg-white rounded-2xl border-2 border-surface-variant pt-12 pb-12 px-8 flex flex-col gap-10 md:gap-6 justify-between items-start">
