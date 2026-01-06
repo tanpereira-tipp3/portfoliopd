@@ -15,7 +15,7 @@ const config: Config = {
         "surface-variant": "#e7e0ec",
         "primary-fixed": "#eaddff",
         "inverse-on-surface": "#f5eff7",
-        "text-default-secondary": "var(--sds-color-text-default-secondary)",
+        "default-secondary": "var(--sds-color-text-default-secondary)",
       },
       fontFamily: {
         "libre-baskerville": ['"Libre Baskerville"', "serif"],
