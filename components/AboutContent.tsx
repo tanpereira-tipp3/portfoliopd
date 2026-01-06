@@ -170,7 +170,7 @@ export default function AboutContent() {
           </div>
 
           {/* About Section */}
-          <div className="flex flex-col gap-12 sm:gap-16 md:gap-20 lg:gap-[80px] items-start relative shrink-0 w-full z-10 pb-0 h-fit">
+          <div className="flex flex-col gap-12 sm:gap-16 md:gap-20 lg:gap-[80px] items-start relative shrink-0 w-full z-10 pb-0 h-fit" style={{ height: 'fit-content' }}>
         {/* Profile Image */}
         <div className="relative w-full aspect-[1259/355.53662109375] rounded-xl sm:rounded-2xl overflow-hidden">
           <Image
