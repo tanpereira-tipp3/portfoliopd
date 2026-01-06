@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { MessageIcon, MessagePlainIcon } from "./icons";
+import { MessagePlainIcon } from "./icons";
 
 interface Message {
   id: string;
@@ -64,7 +64,6 @@ export default function InboxContent() {
     }
   };
 
-  const unreadCount = messages.filter((msg) => !msg.read).length;
 
   const formatTime = (timestamp: string) => {
     const date = new Date(timestamp);
