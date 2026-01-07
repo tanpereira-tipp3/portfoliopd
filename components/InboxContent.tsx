@@ -45,8 +45,8 @@ export default function InboxContent() {
         },
       ];
       setMessages(initialMessages);
-      // Auto-select the first message by default on all screen sizes
-      if (initialMessages.length > 0) {
+      // Auto-select the first message by default on desktop only
+      if (initialMessages.length > 0 && window.innerWidth >= 768) {
         setSelectedMessage(initialMessages[0]);
       }
     }
