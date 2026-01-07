@@ -282,7 +282,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
           {/* Impact Section */}
           {project.impact.length > 0 && (
-            <div className="flex flex-col gap-6 w-full items-center">
+            <div className="flex flex-col gap-6 w-full items-center pb-24 md:pb-0">
               <h2 className="font-roboto font-semibold text-[25px] text-[#1e1e1e] tracking-[0.5px] text-center">
                 Impact
               </h2>
