@@ -200,8 +200,11 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   </h2>
                   {Object.entries(project.process).map(([key, value]) => {
                     if (!value) return null;
+                    // Preserve "AI" and other acronyms before adding spaces
                     const title = key
+                      .replace(/\bAI\b/g, "AI_PLACEHOLDER")
                       .replace(/([A-Z])/g, " $1")
+                      .replace(/AI_PLACEHOLDER/g, "AI")
                       .replace(/^./, (str) => str.toUpperCase())
                       .trim();
                     return (
