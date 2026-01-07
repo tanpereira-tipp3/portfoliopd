@@ -32,7 +32,7 @@ export default function Header() {
       <Link href="/" className="h-6 sm:h-8 relative shrink-0 w-[40px] sm:w-[54px] flex items-center hover:opacity-70 transition-opacity">
         <TipLogo className="w-full h-full" />
       </Link>
-      <div className="flex gap-2 sm:gap-4 items-center relative shrink-0">
+      <div className="flex gap-4 sm:gap-4 items-center relative shrink-0">
         <Link
           href="/inbox"
           className="relative shrink-0 size-5 sm:size-6 text-black hover:opacity-70 transition-opacity"
