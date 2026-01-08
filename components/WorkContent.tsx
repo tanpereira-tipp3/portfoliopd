@@ -155,18 +155,24 @@ function ProjectCard({
         </div>
         <div className="flex flex-col gap-0 items-start relative shrink-0 w-full">
           <p className="font-roboto font-semibold leading-6 relative shrink-0 text-[#1e1e1e] text-base sm:text-base tracking-[0.5px] w-full whitespace-pre-wrap transition-colors duration-300 group-hover:text-primary">
-            {title.split(/(\s|-)/).map((part, index) => {
-              // Preserve spaces and hyphens
-              if (part === ' ' || part === '-') {
-                return part;
-              }
-              // Preserve "AI" and other acronyms in all caps
-              if (part.toUpperCase() === 'AI' || part.match(/^[A-Z]{2,}$/)) {
-                return part.toUpperCase();
-              }
-              // Capitalize first letter, lowercase rest
-              return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
-            }).join('')}
+            {(() => {
+              const parts = title.split(/(\s|-)/);
+              const transformed = parts.map((part, index) => {
+                // Preserve spaces and hyphens
+                if (part === ' ' || part === '-') {
+                  return part;
+                }
+                // CRITICAL: Convert "AI" in ANY case (AI, Ai, aI, ai) to "AI" in all caps
+                const upperPart = part.toUpperCase();
+                if (upperPart === 'AI') {
+                  return 'AI';
+                }
+                // All other words: lowercase
+                return part.toLowerCase();
+              }).join('');
+              // Capitalize the first letter of the entire title
+              return transformed.charAt(0).toUpperCase() + transformed.slice(1);
+            })()}
           </p>
         </div>
         <p className="font-roboto font-normal leading-4 relative shrink-0 text-[#757575] text-xs tracking-[0.4px]">

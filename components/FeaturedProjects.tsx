@@ -155,7 +155,24 @@ function ProjectCard({
         )}
         <div className="flex flex-col gap-0 items-start relative shrink-0 w-full">
           <p className="font-roboto font-semibold leading-6 relative shrink-0 text-[#1e1e1e] text-base sm:text-base tracking-[0.5px] w-full whitespace-pre-wrap transition-colors duration-300 group-hover:text-primary">
-            {title ? (title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()) : "Reinforcement learning recommendation system for Blueconic"}
+            {title ? (() => {
+              const parts = title.split(/(\s|-)/);
+              const transformed = parts.map((part, index) => {
+                // Preserve spaces and hyphens
+                if (part === ' ' || part === '-') {
+                  return part;
+                }
+                // CRITICAL: Convert "AI" in ANY case (AI, Ai, aI, ai) to "AI" in all caps
+                const upperPart = part.toUpperCase();
+                if (upperPart === 'AI') {
+                  return 'AI';
+                }
+                // All other words: lowercase
+                return part.toLowerCase();
+              }).join('');
+              // Capitalize the first letter of the entire title
+              return transformed.charAt(0).toUpperCase() + transformed.slice(1);
+            })() : "Reinforcement learning recommendation system for Blueconic"}
           </p>
         </div>
         {date && (
