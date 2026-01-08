@@ -77,9 +77,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Tania Pereira**
 
-- Portfolio: [Your portfolio URL]
-- LinkedIn: [Your LinkedIn URL]
-- Email: [Your email]
+- Portfolio: [https://portfoliopd-ten.vercel.app/]
+- LinkedIn: [https://www.linkedin.com/in/tania-pereira-709752168/]
+- Email: [tanpereira5@gmail.com]
 
 
 
