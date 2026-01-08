@@ -69,6 +69,32 @@ The design is based on a Figma file and includes:
 - **Tailwind CSS** - Styling
 - **Next.js Image** - Optimized image handling
 
+## 🚢 Deployment
+
+This portfolio is deployed on **Vercel** and automatically deploys on every push to the `main` branch.
+
+### Production URL
+- **Live Site**: [https://portfoliopd-ten.vercel.app/](https://portfoliopd-ten.vercel.app/)
+
+### Deployment Status
+- ✅ Automatic deployments from GitHub
+- ✅ Build verification before deployment
+- ✅ Zero-downtime deployments
+- ✅ Automatic SSL/HTTPS
+
+### Ensuring Site Stability
+1. **Git Repository**: All code is version-controlled in GitHub
+2. **Vercel Integration**: Connected to GitHub for automatic deployments
+3. **Build Verification**: Production builds are tested before deployment
+4. **Static Generation**: Most pages are statically generated for fast loading
+5. **No Environment Variables**: No sensitive config needed - site is fully static
+
+### Backup & Recovery
+- All code is in GitHub repository
+- Vercel keeps deployment history
+- Can redeploy any previous version from Vercel dashboard
+- Local development environment can be restored with `npm install`
+
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
@@ -77,9 +103,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Tania Pereira**
 
-- Portfolio: [https://portfoliopd-ten.vercel.app/]
-- LinkedIn: [https://www.linkedin.com/in/tania-pereira-709752168/]
-- Email: [tanpereira5@gmail.com]
+- Portfolio: [https://portfoliopd-ten.vercel.app/](https://portfoliopd-ten.vercel.app/)
+- LinkedIn: [https://www.linkedin.com/in/tania-pereira-709752168/](https://www.linkedin.com/in/tania-pereira-709752168/)
+- Email: [tanpereira5@gmail.com](mailto:tanpereira5@gmail.com)
 
 
 
