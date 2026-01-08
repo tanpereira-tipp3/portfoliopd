@@ -200,13 +200,32 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                   </h2>
                   {Object.entries(project.process).map(([key, value]) => {
                     if (!value) return null;
-                    // Preserve "AI" and other acronyms before adding spaces
-                    const title = key
-                      .replace(/\bAI\b/g, "AI_PLACEHOLDER")
-                      .replace(/([A-Z])/g, " $1")
-                      .replace(/AI_PLACEHOLDER/g, "AI")
-                      .replace(/^./, (str) => str.toUpperCase())
-                      .trim();
+                    // Transform camelCase to sentence case, preserving "AI" in all caps
+                    // First, protect "AI" by replacing it temporarily
+                    const protectedKey = key.replace(/\bAI\b/gi, 'AI_PLACEHOLDER');
+                    // Split camelCase by capital letters
+                    const words = protectedKey
+                      .replace(/([a-z])([A-Z])/g, '$1 $2')
+                      .split(/\s+/)
+                      .filter(word => word.length > 0);
+                    // Transform each word: first word capitalized, rest lowercase, restore "AI"
+                    const title = words
+                      .map((word, index) => {
+                        if (word === 'AI_PLACEHOLDER') {
+                          return 'AI';
+                        }
+                        // Preserve other acronyms (2+ uppercase letters)
+                        if (word.match(/^[A-Z]{2,}$/)) {
+                          return word;
+                        }
+                        // First word: capitalize first letter, lowercase rest
+                        if (index === 0) {
+                          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                        }
+                        // Other words: all lowercase
+                        return word.toLowerCase();
+                      })
+                      .join(' ');
                     return (
                       <div key={key} className="flex flex-col gap-2">
                         <h2 className="font-roboto font-black text-base text-[#1e1e1e] tracking-[0.5px]">
