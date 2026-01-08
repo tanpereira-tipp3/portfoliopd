@@ -190,6 +190,10 @@ function ProjectCard({
             fill
             style={{ objectPosition: "top" }}
             unoptimized
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+            }}
           />
         </div>
       </div>

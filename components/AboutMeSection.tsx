@@ -24,6 +24,10 @@ export default function AboutMeSection() {
               src="/fotocv.jpg"
               fill
               style={{ objectFit: "cover", objectPosition: "top" }}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
             />
           </div>
         </div>

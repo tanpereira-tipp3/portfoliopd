@@ -220,7 +220,7 @@ export const projects: Project[] = [
       main: "/main5.png",
       beforeProcess: "/main5.png",
       process: "/process5.png",
-      solution: "/solution5.png",
+      solution: "/Solution5.png",
     },
   },
   {

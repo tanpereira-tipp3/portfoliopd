@@ -189,6 +189,10 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                     style={{ color: "transparent", width: "100%", height: "fit-content", objectFit: "contain", objectPosition: "top", borderRadius: "16px" }}
                     unoptimized
                     priority
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
                   />
                 </div>
               )}
