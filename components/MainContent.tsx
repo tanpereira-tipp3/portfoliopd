@@ -65,7 +65,7 @@ export default function MainContent() {
               </div>
             </a>
           </div>
-          <div className="md:col-span-1 lg:col-span-2 flex flex-col min-h-0 md:max-h-full md:overflow-hidden mt-6 md:mt-0">
+          <div className="md:col-span-1 lg:col-span-2 flex flex-col min-h-0 md:max-h-full md:overflow-visible mt-6 md:mt-0">
             <FeaturedProjects />
           </div>
         </div>

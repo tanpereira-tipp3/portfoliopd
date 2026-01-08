@@ -52,9 +52,9 @@ export default function FeaturedProjects() {
           />
         </div>
         {/* Two smaller cards below */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full flex-1 min-h-0 overflow-hidden items-stretch">
-        <div className="flex flex-col min-h-0 h-full pt-1 overflow-hidden">
-          <div className="flex-1 min-h-0 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full flex-1 min-h-0 overflow-visible items-stretch">
+        <div className="flex flex-col min-h-0 h-full pt-1 overflow-visible">
+          <div className="flex-1 min-h-0 overflow-visible">
             <ProjectCard
               col={1}
               row={2}
@@ -67,8 +67,8 @@ export default function FeaturedProjects() {
             />
           </div>
         </div>
-        <div className="flex flex-col min-h-0 h-full pt-1 overflow-hidden">
-          <div className="flex-1 min-h-0 overflow-hidden">
+        <div className="flex flex-col min-h-0 h-full pt-1 overflow-visible">
+          <div className="flex-1 min-h-0 overflow-visible">
             <ProjectCard
               col={2}
               row={2}
