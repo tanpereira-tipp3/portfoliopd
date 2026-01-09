@@ -27,9 +27,20 @@ export interface Project {
   };
 }
 
+// Helper function to generate URL-friendly slugs from titles
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '') // Remove special characters
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Collapse multiple hyphens
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
+
 export const projects: Project[] = [
   {
-    slug: "project-new",
+    slug: "real-time-decisioning-for-personalized-experiences",
     title: "Real-time decisioning for personalized experiences",
     tags: ["SaaS", "AI"],
     date: "Aug 2025",
@@ -61,7 +72,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-6",
+    slug: "ai-assisted-dialogues",
     title: "AI-Assisted Dialogues",
     tags: ["SaaS", "AI", "UX Patterns"],
     date: "Mar 2025",
@@ -94,7 +105,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-2",
+    slug: "operational-vessel-scheduling-platform",
     title: "OPERATIONAL VESSEL SCHEDULING PLATFORM",
     tags: ["B2B", "Logistics Tech"],
     date: "Sep 2024",
@@ -126,7 +137,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-3",
+    slug: "identity-verification-for-shipping-ecosystem",
     title: "IDENTITY VERIFICATION FOR SHIPPING ECOSYSTEM",
     tags: ["B2B", "SaaS", "Compliance"],
     date: "Jun 2024",
@@ -159,7 +170,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-4",
+    slug: "reefer-maintenance-reporting-system",
     title: "REEFER MAINTENANCE REPORTING SYSTEM",
     tags: ["B2B", "Logistics tech"],
     date: "Mar 2024",
@@ -192,7 +203,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-5",
+    slug: "control-tracking-registry-for-digital-bills-of-lading",
     title: "Control Tracking Registry for Digital Bills of Lading",
     tags: ["B2B", "SaaS", "Compliance"],
     date: "Apr 2024",
@@ -224,7 +235,7 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "project-1",
+    slug: "real-time-factory-performance-platform",
     title: "REAL-TIME FACTORY PERFORMANCE PLATFORM",
     tags: ["B2B", "Digital twin"],
     date: "Mar 2023",
